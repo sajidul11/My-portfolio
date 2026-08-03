@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -28,9 +32,7 @@ body{
     border-radius: 16px;
     padding: 40px;
     position: sticky;
-    
     top: 40px;
-
 }
 
 .main-content{
@@ -52,6 +54,7 @@ body{
     width: 120px;
     border-radius: 50%;
     border: 1px solid black;
+    object-fit: cover;
 }
 
 .profile h2{
@@ -89,6 +92,7 @@ body{
 .value{
     color: wheat;
     text-decoration: none;
+    word-break: break-all;
 }
 .email,.phone{
     margin-bottom: 15px;
@@ -101,7 +105,6 @@ body{
     border-top: 2px solid black;
     padding-top:20px;
     text-align: center;
-    
 }   
 
 .social img{
@@ -117,8 +120,6 @@ body{
 }
 
 /* main content */
-
-
 
 /* Navigation */
 
@@ -162,7 +163,6 @@ nav a{
 .content{
     text-align: justify;
     color: #a0a0a0;
-    
 }
 
 #about{
@@ -246,8 +246,9 @@ nav a{
     width: 15px;
     border-radius: 50%;
     border: 3px solid yellow;
+    background-color: rgb(146, 134, 44);
     position: absolute;
-    top:5px;
+    top: 5px;
     left: 0px;
     z-index: 5;
 }
@@ -255,10 +256,10 @@ nav a{
 .liner{
     position: absolute;
     width: 2px;
-    top:0px;
+    top: 0px;
     bottom: 0px;
-    border: 2px solid #3a3a3a;
-    left: 5px;
+    background-color: #3a3a3a;
+    left: 6.5px;
 }
 
 /* portfolio */
@@ -266,7 +267,7 @@ nav a{
 .project-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap:25px;
+    gap: 25px;
     margin-top: 30px;
 }
 
@@ -275,12 +276,12 @@ nav a{
     border-radius: 12px;
     border: 1px solid whitesmoke;
     overflow: hidden;
-    transition: transform 0.5s ease, box-shadow o.5s ease;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .project:hover{
     transform: translateY(-10px);
-    box-shadow: 0px 0px 10px 5px rgba(109, 7, 32, 0.8);;
+    box-shadow: 0px 0px 10px 5px rgba(109, 7, 32, 0.8);
 }
 .project img{
     height: 180px;
@@ -312,7 +313,7 @@ nav a{
     margin-right: 5px;
 }
 
-    /* responsive */
+/* responsive */
 
 @media screen and (max-width:1200px) {
     .main-container{
@@ -332,14 +333,14 @@ nav a{
     }
 
     #navigation nav {
-        /* Adjust nav for smaller screens */
         justify-content: center;
         flex-wrap: wrap;
     }
 
     .sidebar{
         display: flex;
-        justify-content: center;
-        gap: 40px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 }
